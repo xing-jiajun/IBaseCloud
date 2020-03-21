@@ -1,4 +1,8 @@
-# 配置
+# 安装配置
+> yum install -y yum-utils device-mapper-persistent-data lvm2  
+> yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 
+> yum -y install docker-ce  
+  
 阿里云-容器镜像服务-镜像加速器（免费）：
 ```bash
 mkdir /etc/docker
@@ -14,12 +18,12 @@ sudo systemctl restart docker
 # 常用命令
 ##### 执行  
 > systemctl start docker：启动docker  
-systemctl status docker：查看docker启动情况  
-systemctl restart docker：重启docker
+> systemctl status docker：查看docker启动情况  
+> systemctl restart docker：重启docker
 
 ##### docker状态  
 > docker system df：镜像体积  
-docker version：查看docker的版本
+> docker version：查看docker的版本
 
 ##### 镜像操作  
 > docker image [prune]：清除所有的虚玄镜像
@@ -56,6 +60,15 @@ docker version：查看docker的版本
 > WORKDIR [path]:  指定工作目录为[path]  
 
 # Docker Compose
+安装  
+> curl -L https://get.daocloud.io/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose：下载docker-compose  
+> chmod +x /usr/local/bin/docker-compose：修改权限    
+> docker-compose version：查看版本
+
+操作
+> docker-compose [-f xxx.yaml]：[以xxx.yaml配置文件，不指定则默为docker-compose.yaml]启动镜像  
+> docker-compose [-f xxx.yaml] logs -f：[以xxx.yaml配置文件]启动镜像的日志输出  
+
 dockercompose.yml文件组成
 > version xx：版本  
 >> services：  
