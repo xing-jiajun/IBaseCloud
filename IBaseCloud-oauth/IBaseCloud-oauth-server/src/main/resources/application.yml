@@ -1,0 +1,12 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: security
+  profiles:
+    active: db
+  messages:
+    encoding: UTF-8
+logging:
+  level:
+    root: INFO
