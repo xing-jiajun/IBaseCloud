@@ -1,7 +1,10 @@
 # 安装配置
-> yum install -y yum-utils device-mapper-persistent-data lvm2  
-> yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 
-> yum -y install docker-ce  
+下载安装
+```base
+yum install -y yum-utils device-mapper-persistent-data lvm2  
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 
+yum -y install docker-ce  
+```
   
 阿里云-容器镜像服务-镜像加速器（免费）：
 ```bash
@@ -17,9 +20,10 @@ sudo systemctl restart docker
 
 # 常用命令
 ##### 执行  
-> systemctl start docker：启动docker  
-> systemctl status docker：查看docker启动情况  
-> systemctl restart docker：重启docker
+> systemctl start docker：启动docker    
+> systemctl status docker：查看docker启动情况    
+> systemctl restart docker：重启docker  
+> systemctl enable docker：docker开机自启  
 
 ##### docker状态  
 > docker system df：镜像体积  
@@ -61,23 +65,31 @@ sudo systemctl restart docker
 
 # Docker Compose
 安装  
-> curl -L https://get.daocloud.io/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose：下载docker-compose  
-> chmod +x /usr/local/bin/docker-compose：修改权限    
-> docker-compose version：查看版本
+```bash
+#下载docker-compose  
+curl -L https://get.daocloud.io/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose   
+#修改权限
+chmod +x /usr/local/bin/docker-compose      
+#查看版本
+docker-compose version 
+```
 
 操作
 > docker-compose [-f xxx.yaml]：[以xxx.yaml配置文件，不指定则默为docker-compose.yaml]启动镜像  
 > docker-compose [-f xxx.yaml] logs -f：[以xxx.yaml配置文件]启动镜像的日志输出  
 
 dockercompose.yml文件组成
-> version xx：版本  
->> services：  
->>> aaa:   
->>>> restart：启动容器自动开启  
->>>> image：镜像名  
->>>> container_name：容器名  
->>>> volumes：数据卷  
->>>> enviroment： 环境变量  
->>>> ports: 端口映射  
->>>>> - 8888:8888  
+```based
+version xx：版本  
+    services：  
+        aaa:   
+            restart：启动容器自动开启  
+            image：镜像名  
+            container_name：容器名  
+            volumes：数据卷  
+            enviroment： 环境变量  
+            ports: 端口映射  
+                - 8888:8888  
+```
+
 

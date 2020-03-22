@@ -9,7 +9,15 @@
     <packaging>pom</packaging>
 
     <name>IBaseCloud</name>
-    <description>基于SpringCloud、Oauth2、Mybatis-plus分布式敏捷开发系统，提供整套公共微服务服务模块。</description>
+    <description>基于SpringCloud Alibaba、Oauth2、Mybatis-plus分布式敏捷开发系统，提供整套公共微服务服务模块。</description>
+
+	<developers>
+		<developer>
+			<id>XingJiaJun</id>
+			<name>Zhuyeye</name>
+			<email>1429671085@qq.com</email>
+		</developer>
+	</developers>
 
     <properties>
         <java.version>1.8</java.version>
@@ -18,46 +26,18 @@
     </properties>
 
 	<modules>
-		<!--<module>IBaseCloud-oauth</module>-->
 		<module>IBaseCloud-common</module>
-		<!--<module>IBaseCloud-register</module>-->
-		<module>IBaseCloud-test</module>
-		<module>IBaseCloud-config</module>
-		<!--<module>IBaseCloud-gateway</module>-->
+		<module>IBaseCloud-dependencies</module>
+		<module>IBaseCloud-example</module>
+		<!--<module>IBaseCloud-oauth</module>-->
 	</modules>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-		</dependency>
-	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>2.2.0.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.alibaba.cloud</groupId>
-				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
-				<version>2.2.0.RELEASE</version>
+				<groupId>com.ibasecloud</groupId>
+				<artifactId>IBaseCloud-dependencies</artifactId>
+				<version>1.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

@@ -6,10 +6,14 @@
 
 
 #### 应用目录
-> IBaseCloud
->> IBaseCloud-common
->> IBaseCloud-register
->> IBaseCloud-config
+|模块|服务名|端口|
+|:---|:---:|:---:|
+|IBaseCloud|-||
+|IBaseCloud-common|-||
+|IBaseCloud-dependencies|-||
+|IBaseCloud-example|-||
+|IBaseCloud-example-provider|example-provider|10201、10202|
+|IBaseCloud-example-comsumer|example-comsumer|10301|
 
 #### 技术环境
 |框架|版本|介绍|
@@ -29,7 +33,8 @@
 |Seata|||
 
 #### 工具环境
-|框架|版本|介绍|
+|工具|版本|介绍|
+|:---:|:---:|:---:|
 |IDEA|||
 |Postman|||
 |Docker|||
@@ -39,9 +44,10 @@
 #### 服务器环境
 192.168.0.100
 
-|软件|执行|
+|软件|运行|
 |:---:|:---:|
-|Nacos Docker||
+|Nacos Docker|docker-compose -f /usr/local/docker/nacos-docker/example/standalone-mysql-5.7.yaml up -d|
+|Sentinel|java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar /usr/local/sentinel/sentinel-dashboard.jar|  
 
 #### 快速启动
 启动Nacos-Docker：  
@@ -54,3 +60,7 @@ docker ps  # 查看容器启动情况
 浏览器访问 192.168.0.100:8848/nacos进入管理页面
 ```
    
+启动Sentinel：
+```bash
+
+```

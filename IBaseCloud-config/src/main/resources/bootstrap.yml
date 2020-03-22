@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: ibasecloud-config
-  cloud:
-    nacos:
-      server-addr: http://node1:8848
-server:
-  port: 5000
