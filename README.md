@@ -14,6 +14,12 @@
 |IBaseCloud-example|-||
 |IBaseCloud-example-provider|example-provider|10201、10202|
 |IBaseCloud-example-comsumer|example-comsumer|10301|
+|IBaseCloud-oauth|||
+|IBaseCloud-oauth-common|||
+|IBaseCloud-oauth-dao|||
+|IBaseCloud-oauth-service|||
+|IBaseCloud-oauth-server|oauth-server|9901|
+|IBaseCloud-oauth-api|||
 
 #### 技术环境
 |框架|版本|介绍|

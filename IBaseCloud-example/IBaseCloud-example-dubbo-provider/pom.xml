@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>${modelRevision}</modelVersion>
+    <parent>
+        <artifactId>IBaseCloud-example</artifactId>
+        <groupId>com.ibasecloud</groupId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>IBaseCloud-example-dubbo-provider</artifactId>
+    <packaging>pom</packaging>
+
+    <name>IBaseCloud-example-dubbo-provider(实验管理-Dubbo生产者)</name>
+    <description>实验管理-Dubbo生产者</description>
+
+    <modules>
+        <module>IBaseCloud-example-dubbo-provider-api</module>
+        <module>IBaseCloud-example-dubbo-provider-services</module>
+    </modules>
+
+    <properties>
+        <dubbo.version>2.7.5</dubbo.version>
+        <nacos.version>1.1.1</nacos.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-registry-nacos</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+            <version>${nacos.version}</version>
+        </dependency>
+    </dependencies>
+</project>

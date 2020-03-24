@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
+    <modelVersion>${modelRevision}</modelVersion>
     <groupId>com.ibasecloud</groupId>
     <artifactId>IBaseCloud</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
 
     <name>IBaseCloud</name>
@@ -23,13 +22,15 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<modelRevision>4.0.0</modelRevision>
+		<revision>1.0.0</revision>
     </properties>
 
 	<modules>
 		<module>IBaseCloud-common</module>
 		<module>IBaseCloud-dependencies</module>
 		<module>IBaseCloud-example</module>
-		<!--<module>IBaseCloud-oauth</module>-->
+		<module>IBaseCloud-oauth</module>
 	</modules>
 
 	<dependencyManagement>
@@ -37,7 +38,7 @@
 			<dependency>
 				<groupId>com.ibasecloud</groupId>
 				<artifactId>IBaseCloud-dependencies</artifactId>
-				<version>1.0.0</version>
+				<version>${revision}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

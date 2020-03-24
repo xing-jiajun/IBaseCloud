@@ -2,24 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
+    <modelVersion>${modelRevision}</modelVersion>
     <parent>
 	    <groupId>com.ibasecloud</groupId>
 	    <artifactId>IBaseCloud-oauth</artifactId>
-	    <version>1.0.0</version>
+	    <version>${revision}</version>
     </parent>
     <artifactId>IBaseCloud-oauth-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>IBaseCloud-oauth-api(授权中心-接口层)</name>
-    <description>授权中心-统一接口</description>
+    <name>IBaseCloud-oauth-api(认证授权中心-接口层)</name>
+    <description>认证授权中心-统一接口</description>
 
     <dependencies>
         <dependency>
             <groupId>com.ibasecloud</groupId>
             <artifactId>IBaseCloud-oauth-server</artifactId>
-	        <version>1.0.0</version>
+            <version>${revision}</version>
         </dependency>
     </dependencies>
 </project>

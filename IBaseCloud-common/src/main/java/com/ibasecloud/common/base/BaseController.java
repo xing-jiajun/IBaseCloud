@@ -1,11 +1,5 @@
 package com.ibasecloud.common.base;
 
-import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Map;
-
 /**
  * 基础控制器
  *

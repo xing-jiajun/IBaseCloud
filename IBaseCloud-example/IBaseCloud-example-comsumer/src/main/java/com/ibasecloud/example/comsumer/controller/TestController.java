@@ -26,9 +26,6 @@ public class TestController {
     @Autowired
     ExampleProviderService exampleProviderService;
 
-    @Value("${userinfo.name}")
-    String username;
-
     @GetMapping(value = "/get/{test}")
     public String test(@PathVariable String test) {
         return "test-" + test;
@@ -44,8 +41,4 @@ public class TestController {
         return exampleProviderService.test(test);
     }
 
-    @GetMapping(value = "/config")
-    public String test3() {
-        return "自动配置获取：user.name：" + username;
-    }
 }

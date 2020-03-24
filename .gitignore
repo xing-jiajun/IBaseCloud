@@ -7,3 +7,4 @@ target/
 *.iws
 *.iml
 *.ipr
+### http://localhost:9901/oauth/authorize?client_id=client&response_type=code

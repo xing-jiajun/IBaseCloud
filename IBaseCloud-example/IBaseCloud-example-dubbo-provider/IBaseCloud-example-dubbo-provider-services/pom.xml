@@ -5,21 +5,20 @@
     <modelVersion>${modelRevision}</modelVersion>
     <parent>
         <groupId>com.ibasecloud</groupId>
-        <artifactId>IBaseCloud-oauth</artifactId>
+        <artifactId>IBaseCloud-example-dubbo-provider</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>IBaseCloud-oauth-dao</artifactId>
-    <packaging>jar</packaging>
 
-    <name>IBaseCloud-oauth-dao(认证授权中心-持久层)</name>
-    <description>认证授权中心</description>
+    <artifactId>IBaseCloud-example-dubbo-provider-services</artifactId>
+
+    <name>IBaseCloud-example-dubbo-provider-services(实验管理-Dubbo生产者-services)</name>
+    <description>实验管理-Dubbo生产者-services</description>
 
     <dependencies>
         <dependency>
             <groupId>com.ibasecloud</groupId>
-	        <artifactId>IBaseCloud-oauth-common</artifactId>
+            <artifactId>IBaseCloud-example-dubbo-provider-api</artifactId>
             <version>${revision}</version>
         </dependency>
     </dependencies>
-
 </project>

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: example-dubbo-provider
+dubbo:
+  scan:
+    base-packages: com.ibasecloud.example.dubbo.provider.services.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://192.168.0.151:8848

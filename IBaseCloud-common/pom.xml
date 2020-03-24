@@ -2,12 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
+    <modelVersion>${modelRevision}</modelVersion>
 	<parent>
         <groupId>com.ibasecloud</groupId>
         <artifactId>IBaseCloud</artifactId>
-		<version>1.0.0</version>
+		<version>${revision}</version>
 	</parent>
     <artifactId>IBaseCloud-common</artifactId>
     <packaging>jar</packaging>
@@ -34,27 +33,6 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.4.0</version>
         </dependency>
-
-	    <!-- 数据源 -->
-	    <dependency>
-		    <groupId>com.baomidou</groupId>
-		    <artifactId>mybatis-plus-boot-starter</artifactId>
-		    <version>3.3.1.tmp</version>
-	    </dependency>
-	    <dependency>
-		    <groupId>com.baomidou</groupId>
-		    <artifactId>mybatis-plus-generator</artifactId>
-		    <version>3.3.1.tmp</version>
-	    </dependency>
-	    <dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>druid-spring-boot-starter</artifactId>
-		    <version>1.1.10</version>
-	    </dependency>
-	    <dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-	    </dependency>
 
 	    <!-- 工具-->
 	    <dependency>

@@ -1,17 +1,12 @@
-package com.ibasecloud.oauth.server;
+package com.ibasecloud.example.dubbo.comsumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * 认证授权中心启动类
- *
- * @author 幸佳俊
- */
 @SpringBootApplication
-public class OauthApplication {
+public class ExampleDubboComsumer {
 
     public static void main(String[] args) {
-        SpringApplication.run(OauthApplication.class, args);
+        SpringApplication.run(ExampleDubboComsumer.class, args);
     }
 }
