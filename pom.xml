@@ -2,13 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.ibasecloud</groupId>
     <artifactId>IBaseCloud</artifactId>
-    <version>${revision}</version>
-    <packaging>pom</packaging>
+    <version>1.0.0</version>
 
+    <packaging>pom</packaging>
     <name>IBaseCloud</name>
-    <description>基于SpringCloud Alibaba、Oauth2、Mybatis-plus分布式敏捷开发系统，提供整套公共微服务服务模块。</description>
+    <description>分布式敏捷开发服务系统</description>
+
+	<modules>
+		<module>IBaseCloud-common</module>
+		<module>IBaseCloud-dependencies</module>
+		<module>IBaseCloud-gateway</module>
+		<!--		<module>IBaseCloud-example</module>-->
+		<!--		<module>IBaseCloud-oauth</module>-->
+	</modules>
 
 	<developers>
 		<developer>
@@ -19,29 +28,35 @@
 	</developers>
 
     <properties>
+		<ibasecloud.version>1.0.0</ibasecloud.version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<modelRevision>4.0.0</modelRevision>
-		<revision>1.0.0</revision>
     </properties>
-
-	<modules>
-		<module>IBaseCloud-common</module>
-		<module>IBaseCloud-dependencies</module>
-		<module>IBaseCloud-example</module>
-		<module>IBaseCloud-oauth</module>
-	</modules>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.ibasecloud</groupId>
 				<artifactId>IBaseCloud-dependencies</artifactId>
-				<version>${revision}</version>
+				<version>${ibasecloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
